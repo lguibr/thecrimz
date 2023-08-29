@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "buildings",
+  "info": {
+    "singularName": "building",
+    "pluralName": "buildings",
+    "displayName": "building"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cost": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::modifier.modifier"
+    },
+    "modifier": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::modifier.modifier"
+    },
+    "benefits": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::modifier.modifier"
+    }
+  }
+}
